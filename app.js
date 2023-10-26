@@ -70,10 +70,16 @@ app.set('views','./views');
 //     res.render('first');
 // })
 
-app.get('/',(req,res)=>{
-    res.render('HelloWorld',{ //parsing dynamic values
-        url:"https://www.google.co.in/",
-        name:"Muthukumar"
+// app.get('/',(req,res)=>{
+//     res.render('HelloWorld',{ //parsing dynamic values
+//         url:"https://www.google.co.in/",
+//         name:"Murugan Muthukumar"
+//     });
+// })
+
+app.get('/dynamic',(req,res)=>{
+    res.render('dynamic',{ //If Conditions
+        age:20,
     });
 })
 
