@@ -71,7 +71,10 @@ app.set('views','./views');
 // })
 
 app.get('/',(req,res)=>{
-    res.render('HelloWorld');
+    res.render('HelloWorld',{ //parsing dynamic values
+        url:"https://www.google.co.in/",
+        name:"Muthukumar"
+    });
 })
 
 
