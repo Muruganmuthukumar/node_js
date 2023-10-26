@@ -77,8 +77,14 @@ app.set('views','./views');
 //     });
 // })
 
+// app.get('/dynamic',(req,res)=>{
+//     res.render('dynamic',{ //If Conditions
+//         age:20,
+//     });
+// })
+
 app.get('/dynamic',(req,res)=>{
-    res.render('dynamic',{ //If Conditions
+    res.render('content',{ //Static Component For All Pages
         age:20,
     });
 })
