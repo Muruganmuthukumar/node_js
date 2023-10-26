@@ -1,0 +1,13 @@
+body{
+    background-color:chocolate;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-top: 40px;
+}
+p{
+    color: white;
+    font-size: 20px;
+    text-transform: uppercase;
+}

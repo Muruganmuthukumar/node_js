@@ -83,10 +83,18 @@ app.set('views','./views');
 //     });
 // })
 
-app.get('/dynamic',(req,res)=>{
-    res.render('content',{ //Static Component For All Pages
-        age:20,
-    });
+// app.get('/dynamic',(req,res)=>{
+    //     res.render('content',{ //Static Component For All Pages
+    //         age:20
+//     });
+// })
+
+const path = require('path')
+// app.use(express.static('public'))
+app.use(express.static(path.join(__dirname,'public')))
+
+app.get('/',(req,res)=>{
+    res.render('first');
 })
 
 
