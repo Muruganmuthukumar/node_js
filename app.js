@@ -63,8 +63,8 @@ var app=express()
 var express=require("express")
 var app=express()
 
-app.set('view engine', 'pug'); // we can use pug for dynamic contents in front end
-app.set('views','./views');
+// app.set('view engine', 'pug'); // we can use pug for dynamic contents in front end
+// app.set('views','./views');
 
 // app.get('/',(req,res)=>{
 //     res.render('first');
@@ -89,12 +89,21 @@ app.set('views','./views');
 //     });
 // })
 
-const path = require('path')
-// app.use(express.static('public'))
-app.use(express.static(path.join(__dirname,'public')))
+// const path = require('path')
+// // app.use(express.static('public'))
+// app.use(express.static(path.join(__dirname,'public')))
 
-app.get('/',(req,res)=>{
-    res.render('first');
+// app.get('/',(req,res)=>{
+//     res.render('first');
+// })
+
+app.set('view engine', 'pug');
+app.set('views','./views');
+
+app.use(express.static('public'));
+
+app.get('/static',(req,res)=>{
+    res.render('static');
 })
 
 
