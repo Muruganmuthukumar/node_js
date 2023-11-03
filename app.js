@@ -14,8 +14,8 @@
 // app.listen(3000)
 
 
-var express=require("express")
-var app=express()
+// var express=require("express")
+// var app=express()
 
 // app.get('/',(req,res)=>{
 //     res.send('Root')
@@ -60,8 +60,7 @@ var app=express()
 // })
 
 
-var express=require("express")
-var app=express()
+
 
 // app.set('view engine', 'pug'); // we can use pug for dynamic contents in front end
 // app.set('views','./views');
@@ -97,17 +96,15 @@ var app=express()
 //     res.render('first');
 // })
 
-app.set('view engine', 'pug');
-app.set('views','./views');
+// app.set('view engine', 'pug');
+// app.set('views','./views');
 
-app.use(express.static('public'));
+// app.use(express.static('public'));
 
-app.get('/static',(req,res)=>{
-    res.render('static');
-})
-
-
-app.listen(3000)
+// app.get('/static',(req,res)=>{
+//     res.render('static');
+// })
+// app.listen(3000)
 
 
 
