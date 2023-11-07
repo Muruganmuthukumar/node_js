@@ -12,17 +12,63 @@
 // var validator=require("validator")
 // console.log(validator.isEmail("muthu@gmail.com"));
 
-const EventEmitter = require('events');
-const logEvents = require('./logEvents');
-const path = require('path');
+// const EventEmitter = require('events');
+// const logEvents = require('./logEvents');
+// const path = require('path');
 
-class Emitter extends EventEmitter{ };
+// class Emitter extends EventEmitter{ };
 
-const myEmitter = new Emitter();
+// const myEmitter = new Emitter();
 
-myEmitter.on('log',(msg)=>logEvents(msg))
+// myEmitter.on('log',(msg)=>logEvents(msg))
 
-myEmitter.emit('log',"Log Submitted","notes.txt")
+// myEmitter.emit('log',"Log Submitted","notes.txt")
+
+
+// require('./models/db');
+const express = require('express')
+const app = express();
+const bodyParser = require('body-parser')
+
+const studentController=require('./controllers/stu.controller')
+
+app.use(bodyParser.urlencoded({
+    extended:true
+}));
+app.use(bodyParser.json());
+
+app.listen(3000, ()=>{
+    console.log("Server is running on port 3000");
+})
+
+app.use('/student', studentController)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
